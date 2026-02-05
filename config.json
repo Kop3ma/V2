@@ -1,7 +1,12 @@
 {
+  "log": {
+    "loglevel": "warning",
+    "access": "",   // اگر می‌خوای access log هم داشته باشی مسیر بده
+    "error": ""
+  },
   "inbounds": [
     {
-      "port": 8080,
+      "port": "${PORT}",
       "listen": "0.0.0.0",
       "protocol": "vless",
       "settings": {
@@ -18,10 +23,19 @@
         "wsSettings": {
           "path": "/"
         }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
       }
     }
   ],
   "outbounds": [
-    { "protocol": "freedom" }
-  ]
+    {
+      "protocol": "freedom"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs"
+  }
 }
