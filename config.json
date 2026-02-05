@@ -1,6 +1,6 @@
 {
   "log": {
-    "loglevel": "debug"   // ← این رو debug گذاشتم تا همه چیز رو ببینیم
+    "loglevel": "debug"
   },
   "inbounds": [
     {
@@ -19,7 +19,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/ws-kop3ma-abc123xyz
+          "path": "/ws-kop3ma-abc123xyz"
         }
       },
       "sniffing": {
