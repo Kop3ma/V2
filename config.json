@@ -1,10 +1,10 @@
 {
   "log": {
-    "loglevel": "warning"
+    "loglevel": "debug"   // ← این رو debug گذاشتم تا همه چیز رو ببینیم
   },
   "inbounds": [
     {
-     "port": 8080,
+      "port": 8080,
       "listen": "0.0.0.0",
       "protocol": "vless",
       "settings": {
@@ -18,29 +18,20 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "alii.up.railway.app",
-          "alpn": ["h2", "http/1.1"]
-        },
         "wsSettings": {
-          "path": "/ws-kop3ma-abc123xyz"
+          "path": "/ws-kop3ma-abc123xyz
         }
       },
       "sniffing": {
         "enabled": true,
         "destOverride": ["http", "tls"]
       }
-    },
-    {
-      "port": 8081,
-      "listen": "0.0.0.0",
-      "protocol": "http",
-      "settings": {}
     }
   ],
   "outbounds": [
-    { "protocol": "freedom" }
+    {
+      "protocol": "freedom"
+    }
   ],
   "routing": {
     "domainStrategy": "AsIs"
