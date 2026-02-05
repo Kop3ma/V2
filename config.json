@@ -1,8 +1,6 @@
 {
   "log": {
-    "loglevel": "warning",
-    "access": "",   // اگر می‌خوای access log هم داشته باشی مسیر بده
-    "error": ""
+    "loglevel": "debug"   // ← این رو debug گذاشتم تا همه چیز رو ببینیم
   },
   "inbounds": [
     {
