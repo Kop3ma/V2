@@ -1,6 +1,6 @@
 {
   "log": {
-    "loglevel": "debug"   // ← این رو debug گذاشتم تا همه چیز رو ببینیم
+    "loglevel": "warning"
   },
   "inbounds": [
     {
@@ -18,20 +18,29 @@
       },
       "streamSettings": {
         "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "alii.up.railway.app",
+          "alpn": ["h2", "http/1.1"]
+        },
         "wsSettings": {
-          "path": "/cdnshop"
+          "path": "/ws-kop3ma-abc123xyz"
         }
       },
       "sniffing": {
         "enabled": true,
         "destOverride": ["http", "tls"]
       }
+    },
+    {
+      "port": 8081,
+      "listen": "0.0.0.0",
+      "protocol": "http",
+      "settings": {}
     }
   ],
   "outbounds": [
-    {
-      "protocol": "freedom"
-    }
+    { "protocol": "freedom" }
   ],
   "routing": {
     "domainStrategy": "AsIs"
