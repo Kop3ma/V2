@@ -16,59 +16,12 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/cdnshop"
+          "path": "/"
         }
-      }
-    },
-    // 👇 این inbound جدید اضافه کن
-    {
-      "port": 80,
-      "listen": "0.0.0.0",
-      "protocol": "dokodemo-door",
-      "settings": {
-        "address": "127.0.0.1"
-      },
-      "tag": "api",
-      "streamSettings": {
-        "network": "tcp"
       }
     }
   ],
   "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ],
-  // 👇 این routing اضافه کن
-  "routing": {
-    "rules": [
-      {
-        "type": "field",
-        "inboundTag": ["api"],
-        "outboundTag": "api"
-      }
-    ]
-  },
-  // 👇 این outbound جدید اضافه کن
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "tag": "direct"
-    },
-    {
-      "protocol": "http",
-      "tag": "api",
-      "settings": {
-        "response": {
-          "version": "1.1",
-          "status": "200",
-          "reason": "OK",
-          "headers": {
-            "Content-Type": "text/html; charset=utf-8"
-          },
-          "body": "<h1>✅ Xray Server Running</h1><p>Status: Online</p><p>Port: 443</p><p>Path: /cdnshop</p>"
-        }
-      }
-    }
+    { "protocol": "freedom" }
   ]
 }
