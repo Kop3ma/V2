@@ -4,7 +4,7 @@
   },
   "inbounds": [
     {
-      "port": 8080,
+      "port": 8100080,
       "listen": "0.0.0.0",
       "protocol": "vless",
       "settings": {
