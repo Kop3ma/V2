@@ -1,7 +1,4 @@
-{
-  "log": {
-    "loglevel": "debug"
-  },
+
   "inbounds": [
     {
       "port": 8080,
@@ -21,19 +18,10 @@
         "wsSettings": {
           "path": "/ws-kop3ma-abc123xyz"
         }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
       }
     }
   ],
   "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ],
-  "routing": {
-    "domainStrategy": "AsIs"
-  }
+    { "protocol": "freedom" }
+  ]
 }
