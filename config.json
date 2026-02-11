@@ -35,3 +35,5 @@
   ],
   "routing": {
     "domainStrategy": "AsIs"
+  }
+}
