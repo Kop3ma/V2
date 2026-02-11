@@ -19,7 +19,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/ws-kop3ma-abc123xyz"
+          "path": "/"
         }
       },
       "sniffing": {
