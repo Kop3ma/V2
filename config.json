@@ -6,25 +6,19 @@
     {
       "port": 8080,
       "listen": "0.0.0.0",
-      "protocol": "vless",
+      "protocol": "trojan",
       "settings": {
         "clients": [
           {
-            "id": "70c50e3a-5b87-49dd-bd20-03c7f2735e40",
-            "flow": ""
+            "password": "70c50e3a-5b87-49dd-bd20-03c7f2735e40"
           }
-        ],
-        "decryption": "none"
+        ]
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
           "path": "/7xK9pL2mR4vN8qW"
         }
-      },
-      "sniffing": {
-        "enabled": false,
-        "destOverride": ["http", "tls"]
       }
     }
   ],
@@ -32,8 +26,5 @@
     {
       "protocol": "freedom"
     }
-  ],
-  "routing": {
-    "domainStrategy": "AsIs"
-  }
+  ]
 }
